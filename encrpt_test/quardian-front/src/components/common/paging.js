@@ -1,0 +1,20 @@
+import React from 'react';
+import Pagination from "react-js-pagination";
+
+const Paging = ({ page, count, setPage }) => {
+    return (
+        <div>
+            <Pagination
+                activePage={1}
+                itemsCountPerPage={5}
+                totalItemsCount={count}
+                pageRangeDisplayed={5}
+                prevPageText={"<"}
+                nextPageText={">"}
+                onChange={setPage}
+            />
+        </div>
+    );
+};
+
+export default Paging;
